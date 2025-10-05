@@ -167,8 +167,8 @@
           <div class="mb-4">
             <div :class="getVerificationBadgeClass(document.verification_status)" class="px-2 py-1 rounded text-xs font-medium">
               {{ document.verification_status }}
+              </div>
             </div>
-          </div>
 
           <!-- Document Features -->
           <div v-if="document.features && document.features.length > 0" class="mb-4">
@@ -188,12 +188,12 @@
 
           <!-- Actions -->
           <div class="flex items-center justify-between">
-            <button
+              <button
               @click="viewDocument(document)"
-              class="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded text-sm transition-colors"
-            >
+                class="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded text-sm transition-colors"
+              >
               Preview
-            </button>
+              </button>
             <div class="flex items-center gap-2">
               <button
                 @click="addToCart(document)"
@@ -264,7 +264,7 @@ const filteredDocuments = computed(() => {
   // Search filter
   if (searchTerm.value) {
     const search = searchTerm.value.toLowerCase()
-    filtered = filtered.filter(doc => 
+    filtered = filtered.filter(doc =>
       doc.document_type?.toLowerCase().includes(search) ||
       doc.institution?.toLowerCase().includes(search) ||
       doc.country?.toLowerCase().includes(search) ||

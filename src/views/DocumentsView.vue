@@ -157,8 +157,8 @@
             <div v-if="document.holder_name" class="bg-gray-700/50 p-3 rounded-lg">
               <div class="text-gray-400 text-xs mb-1">Holder Name</div>
               <div class="text-white text-sm">{{ maskName(document.holder_name) }}</div>
+              </div>
             </div>
-          </div>
 
           <!-- Verification Status -->
           <div class="mb-4">
@@ -169,12 +169,12 @@
 
           <!-- Actions -->
           <div class="flex items-center justify-between">
-            <button
+              <button
               @click="viewDocument(document)"
-              class="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded text-sm transition-colors"
-            >
+                class="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded text-sm transition-colors"
+              >
               Preview
-            </button>
+              </button>
             <div class="flex items-center gap-2">
               <button
                 @click="addToCart(document)"
@@ -245,7 +245,7 @@ const filteredDocuments = computed(() => {
   // Search filter
   if (searchTerm.value) {
     const search = searchTerm.value.toLowerCase()
-    filtered = filtered.filter(doc => 
+    filtered = filtered.filter(doc =>
       doc.document_type?.toLowerCase().includes(search) ||
       doc.country?.toLowerCase().includes(search) ||
       doc.issuer?.toLowerCase().includes(search) ||

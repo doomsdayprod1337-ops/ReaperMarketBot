@@ -97,16 +97,16 @@
       </div>
 
       <div v-else-if="filteredTransactions.length === 0" class="text-center py-12">
-        <div class="text-6xl mb-4">💳</div>
-        <h3 class="text-xl font-semibold text-white mb-2">No transactions found</h3>
-        <p class="text-gray-400 mb-6">Your transaction history will appear here</p>
+          <div class="text-6xl mb-4">💳</div>
+          <h3 class="text-xl font-semibold text-white mb-2">No transactions found</h3>
+          <p class="text-gray-400 mb-6">Your transaction history will appear here</p>
         <button
           @click="loadTransactions"
           class="px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors"
         >
           Refresh Transactions
         </button>
-      </div>
+        </div>
 
       <div v-else class="space-y-4">
         <div
@@ -125,10 +125,10 @@
                 <div class="text-sm text-gray-400">ID: {{ transaction.transaction_id }}</div>
               </div>
             </div>
-            <div class="text-right">
+              <div class="text-right">
               <div :class="getAmountColor(transaction.type)" class="text-2xl font-bold">
                 {{ getAmountPrefix(transaction.type) }}${{ transaction.amount.toFixed(2) }}
-              </div>
+                </div>
               <div :class="getStatusColor(transaction.status)" class="text-xs px-2 py-1 rounded font-medium">
                 {{ transaction.status }}
               </div>
@@ -149,7 +149,7 @@
               <div class="text-gray-400 text-xs mb-1">Type</div>
               <div class="text-white text-sm capitalize">{{ transaction.type }}</div>
             </div>
-          </div>
+            </div>
 
           <!-- Additional Details -->
           <div v-if="transaction.item_name || transaction.notes" class="mb-4">
@@ -158,7 +158,7 @@
               <div class="text-white text-sm">
                 <div v-if="transaction.item_name">Item: {{ transaction.item_name }}</div>
                 <div v-if="transaction.notes">{{ transaction.notes }}</div>
-              </div>
+            </div>
             </div>
           </div>
 
@@ -239,7 +239,7 @@ const filteredTransactions = computed(() => {
   // Search filter
   if (searchTerm.value) {
     const search = searchTerm.value.toLowerCase()
-    filtered = filtered.filter(transaction => 
+    filtered = filtered.filter(transaction =>
       transaction.transaction_id?.toLowerCase().includes(search) ||
       transaction.description?.toLowerCase().includes(search) ||
       transaction.item_name?.toLowerCase().includes(search) ||
