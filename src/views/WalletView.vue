@@ -190,8 +190,7 @@ import {
   FileText,
   ArrowUpRight,
   ArrowDownLeft,
-  Send,
-  Receive
+  Send
 } from 'lucide-vue-next';
 
 const web3Store = useWeb3Store();
@@ -319,7 +318,7 @@ const isCurrentNetwork = (network) => {
 };
 
 const getTransactionIcon = (type) => {
-  return type === 'send' ? Send : Receive;
+  return type === 'send' ? Send : ArrowDownLeft;
 };
 
 const getTransactionIconClass = (type) => {
