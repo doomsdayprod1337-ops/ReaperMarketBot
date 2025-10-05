@@ -41,6 +41,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Onboarding-style colors
+        glass: {
+          50: 'rgba(255, 255, 255, 0.1)',
+          100: 'rgba(255, 255, 255, 0.2)',
+          200: 'rgba(255, 255, 255, 0.3)',
+        },
+        gradient: {
+          primary: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          secondary: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+          accent: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -60,6 +71,10 @@ export default {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'coin-spin': 'coinSpin 2s linear infinite',
         'float': 'float 3s ease-in-out infinite',
+        'gradient-shift': 'gradientShift 15s ease infinite',
+        'glass-shimmer': 'glassShimmer 2s ease-in-out infinite',
+        'onboarding-slide': 'onboardingSlide 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+        'step-complete': 'stepComplete 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
       },
       keyframes: {
         fadeIn: {
@@ -89,6 +104,24 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        gradientShift: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+        glassShimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        onboardingSlide: {
+          '0%': { transform: 'translateX(100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        stepComplete: {
+          '0%': { transform: 'scale(1)', opacity: '1' },
+          '50%': { transform: 'scale(1.1)', opacity: '0.8' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
         },
       },
       boxShadow: {

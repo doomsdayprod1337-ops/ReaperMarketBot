@@ -1,86 +1,100 @@
 <template>
-  <div class="min-h-screen bg-gray-900">
+  <div class="min-h-screen relative overflow-hidden">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+      <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-blue-500/20 animate-gradient-shift"></div>
+    </div>
+    
     <!-- Hero Section -->
-    <div class="relative bg-gradient-to-br from-gray-900 via-red-900/20 to-gray-900">
+    <div class="relative z-10">
       <div class="container mx-auto px-4 py-16">
         <div class="text-center">
-          <h1 class="text-5xl font-bold text-white mb-6 font-mono">
-            REAPER MARKET
-          </h1>
-          <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Premium marketplace for stealer logs, compromised systems, and digital assets
-          </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <router-link 
-              to="/bots" 
-              class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Browse Bots
-            </router-link>
-            <router-link 
-              to="/services" 
-              class="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              View Services
-            </router-link>
-            <router-link 
-              to="/marketplace" 
-              class="border border-red-600 text-red-400 hover:bg-red-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Explore Marketplace
-            </router-link>
+          <!-- Glass Card Container -->
+          <div class="glass-card max-w-4xl mx-auto p-8 animate-onboarding-slide">
+            <h1 class="text-6xl font-bold gradient-text mb-6 font-mono tracking-wider">
+              REAPER MARKET
+            </h1>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Premium marketplace for stealer logs, compromised systems, and digital assets
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+              <router-link 
+                to="/bots" 
+                class="glass-button hover:scale-105 transform transition-all duration-300"
+              >
+                <span class="flex items-center gap-2">
+                  🤖 Browse Bots
+                </span>
+              </router-link>
+              <router-link 
+                to="/services" 
+                class="glass-button hover:scale-105 transform transition-all duration-300"
+              >
+                <span class="flex items-center gap-2">
+                  ⚙️ View Services
+                </span>
+              </router-link>
+              <router-link 
+                to="/marketplace" 
+                class="glass-button hover:scale-105 transform transition-all duration-300"
+              >
+                <span class="flex items-center gap-2">
+                  🛒 Explore Marketplace
+                </span>
+              </router-link>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Stats Section -->
-    <div class="bg-gray-800 py-16">
+    <div class="relative z-10 py-16">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="text-center">
-            <div class="text-4xl font-bold text-red-500 mb-2">1,247</div>
-            <div class="text-gray-300">Active Bots</div>
+          <div class="glass-card text-center p-6 hover:scale-105 transform transition-all duration-300">
+            <div class="text-4xl font-bold gradient-text mb-2">1,247</div>
+            <div class="text-white/70">Active Bots</div>
           </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-red-500 mb-2">$2.4M</div>
-            <div class="text-gray-300">Total Volume</div>
+          <div class="glass-card text-center p-6 hover:scale-105 transform transition-all duration-300">
+            <div class="text-4xl font-bold gradient-text mb-2">$2.4M</div>
+            <div class="text-white/70">Total Volume</div>
           </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-red-500 mb-2">89</div>
-            <div class="text-gray-300">Countries</div>
+          <div class="glass-card text-center p-6 hover:scale-105 transform transition-all duration-300">
+            <div class="text-4xl font-bold gradient-text mb-2">89</div>
+            <div class="text-white/70">Countries</div>
           </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-red-500 mb-2">24/7</div>
-            <div class="text-gray-300">Support</div>
+          <div class="glass-card text-center p-6 hover:scale-105 transform transition-all duration-300">
+            <div class="text-4xl font-bold gradient-text mb-2">24/7</div>
+            <div class="text-white/70">Support</div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Features Section -->
-    <div class="bg-gray-900 py-16">
+    <div class="relative z-10 py-16">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-white text-center mb-12">Marketplace Features</h2>
+        <h2 class="text-3xl font-bold gradient-text text-center mb-12">Marketplace Features</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <div class="text-red-500 text-4xl mb-4">🤖</div>
+          <div class="glass-card p-6 hover:scale-105 transform transition-all duration-300">
+            <div class="text-4xl mb-4 floating-element">🤖</div>
             <h3 class="text-xl font-semibold text-white mb-3">Stealer Logs</h3>
-            <p class="text-gray-300">
+            <p class="text-white/70">
               Premium stealer logs with detailed system information, browser data, and financial credentials.
             </p>
           </div>
-          <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <div class="text-red-500 text-4xl mb-4">⚡</div>
+          <div class="glass-card p-6 hover:scale-105 transform transition-all duration-300">
+            <div class="text-4xl mb-4 floating-element">⚡</div>
             <h3 class="text-xl font-semibold text-white mb-3">Services</h3>
-            <p class="text-gray-300">
+            <p class="text-white/70">
               Professional development services including custom software, bots, and security solutions.
             </p>
           </div>
-          <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <div class="text-red-500 text-4xl mb-4">🔒</div>
+          <div class="glass-card p-6 hover:scale-105 transform transition-all duration-300">
+            <div class="text-4xl mb-4 floating-element">🔒</div>
             <h3 class="text-xl font-semibold text-white mb-3">Secure</h3>
-            <p class="text-gray-300">
+            <p class="text-white/70">
               End-to-end encryption, secure payments, and anonymous transactions for maximum privacy.
             </p>
           </div>
