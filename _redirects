@@ -1,0 +1,8 @@
+# SPA (Single Page Application) redirects
+# All routes should serve the index.html file for client-side routing
+
+# API routes (if you have backend functions)
+/api/*  /api/:splat  200
+
+# All other routes serve the main app
+/*    /index.html   200
