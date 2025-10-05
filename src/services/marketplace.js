@@ -1,5 +1,5 @@
 import axios from 'axios';
-import config from '@/config/environment';
+import { config } from '@/config/environment';
 
 // Configure axios instance for marketplace API
 const marketplaceAPI = axios.create({

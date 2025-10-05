@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
-import config from '@/config/environment';
+import { config } from '@/config/environment';
 
 class Web3Service {
   constructor() {
