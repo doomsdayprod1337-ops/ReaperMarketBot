@@ -477,7 +477,7 @@ class MarketplaceService {
         error: error.response?.data?.message || 'Search failed',
       };
     }
-  },
+  }
 
   // Favorites/Wishlist
   async getFavorites(page = 1, limit = 20) {
@@ -496,7 +496,7 @@ class MarketplaceService {
         error: error.response?.data?.message || 'Failed to fetch favorites',
       };
     }
-  },
+  }
 
   async addToFavorites(itemId, itemType) {
     try {
@@ -514,7 +514,7 @@ class MarketplaceService {
         error: error.response?.data?.message || 'Failed to add to favorites',
       };
     }
-  },
+  }
 
   async removeFromFavorites(itemId) {
     try {
@@ -528,7 +528,7 @@ class MarketplaceService {
         error: error.response?.data?.message || 'Failed to remove from favorites',
       };
     }
-  },
+  }
 
   // Reviews and Ratings
   async getReviews(itemId, page = 1, limit = 20) {
@@ -547,7 +547,7 @@ class MarketplaceService {
         error: error.response?.data?.message || 'Failed to fetch reviews',
       };
     }
-  },
+  }
 
   async addReview(itemId, rating, comment) {
     try {
@@ -566,7 +566,7 @@ class MarketplaceService {
         error: error.response?.data?.message || 'Failed to add review',
       };
     }
-  },
+  }
 
   // Support and Help
   async createSupportTicket(subject, message, priority = 'medium') {
@@ -586,7 +586,7 @@ class MarketplaceService {
         error: error.response?.data?.message || 'Failed to create support ticket',
       };
     }
-  },
+  }
 
   async getSupportTickets(page = 1, limit = 20) {
     try {
